@@ -23,7 +23,7 @@ def run_backtest(
         indiv_ret = wide.loc[nxt] / wide.loc[t] - 1.0
         gross = float(sum(weights[s] * indiv_ret[s] for s in weights))
 
-        all_names = set(weights) | set(prev_weights)
+        all_names = sorted(set(weights) | set(prev_weights))
         turnover = float(
             sum(abs(weights.get(s, 0.0) - prev_weights.get(s, 0.0)) for s in all_names)
         )

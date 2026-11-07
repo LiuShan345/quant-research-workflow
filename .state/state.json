@@ -1,6 +1,6 @@
 {
   "case_id": "case-001",
-  "request_id": "31a3f540-119f-48b9-b8cc-427a1f9608b6",
+  "request_id": "d1c34222-963e-4b5d-9905-3fd7f9492f4d",
   "state": "MONITORING",
   "role": "orchestrator",
   "round": 1,
@@ -24,7 +24,7 @@
     },
     "trades.csv": {
       "path": "output\\tables\\trades.csv",
-      "sha256": "e2e773e55cc65fe8b7780e82b2467a13368d9966babe2a2ae32734446cf2b634",
+      "sha256": "99ccb1bf44dc3e0c9cd3b4b849eb117489f426e16ee7bcc9ad6dede6cbcb317f",
       "as_of": "2025-12-31"
     },
     "equity_curve.png": {

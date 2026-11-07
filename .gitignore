@@ -1,0 +1,28 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 临时与运行日志（保留目录占位） =====
+temp/*
+!temp/.gitkeep
+.logs/*
+!.logs/.gitkeep
+
+# ===== 凭据与敏感信息（绝不提交） =====
+.env
+*.secret
+*.key
+*credentials*
+*password*
+config/secrets*
+
+# ===== 大数据/中间缓存（示例fixture保留，真实大数据忽略） =====
+*.parquet
+!tests/fixtures/**/*.parquet

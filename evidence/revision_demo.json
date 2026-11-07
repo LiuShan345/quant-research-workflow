@@ -1,0 +1,12 @@
+{
+  "问题项台账": [
+    {
+      "issue_id": "demo-issue-001",
+      "status": "resolved",
+      "owner": "factor-agent",
+      "evidence": "evidence/pit_leakage.json"
+    }
+  ],
+  "修复边": "REVISION -> SIGNAL_READY",
+  "问题项由独立核验关闭": true
+}

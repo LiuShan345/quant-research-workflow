@@ -1,0 +1,9 @@
+{
+  "pass": 1,
+  "data_gate": "PASS",
+  "pit_gate": "PASS",
+  "numerical_gate": "PASS",
+  "cost_gate": "PASS",
+  "limit_gate": "PASS",
+  "open_issues": 0
+}

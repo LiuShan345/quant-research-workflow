@@ -1,0 +1,16 @@
+{
+  "崩溃后已完成阶段": [
+    "data",
+    "signal"
+  ],
+  "恢复后全部阶段": [
+    "data",
+    "signal",
+    "backtest",
+    "robustness",
+    "approval",
+    "monitoring"
+  ],
+  "最终状态": "MONITORING",
+  "已完成阶段未被重复执行": true
+}

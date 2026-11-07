@@ -1,0 +1,57 @@
+{
+  "case_id": "case-recovery",
+  "request_id": "03dcdda1-82f1-491f-9138-e175fc922c1a",
+  "state": "MONITORING",
+  "role": "orchestrator",
+  "round": 1,
+  "retries": 0,
+  "as_of": "2025-12-31",
+  "artifacts": {
+    "price_snapshot": {
+      "path": "data\\raw\\snapshot_2025-12-31.csv",
+      "sha256": "ceb13de18660532e7c43ad2057cd5b5fd0be4a6142626a77212592e545e47292",
+      "as_of": "2025-12-31"
+    },
+    "signals": {
+      "path": "data\\processed\\signals.csv",
+      "sha256": "0a39a474d314ba588efda402b05cb4de5a10cd1d7fbc239de575996c69f98537",
+      "as_of": "2025-12-31"
+    },
+    "periods.csv": {
+      "path": "output\\tables\\periods.csv",
+      "sha256": "a9908f9647c7e98b5640607c51eadef450939fd8ea4e43bb0ab4e21c1d99a70c",
+      "as_of": "2025-12-31"
+    },
+    "trades.csv": {
+      "path": "output\\tables\\trades.csv",
+      "sha256": "9ef522283f0a53be57b5711c9d75e30706bb39d0f873bbf74f6ebff6bfc583df",
+      "as_of": "2025-12-31"
+    },
+    "equity_curve.png": {
+      "path": "output\\figures\\equity_curve.png",
+      "sha256": "28891fedc88e9f97b49defefd83a6ba8b1a2c3f95dc73856e2f411f53e279aae",
+      "as_of": "2025-12-31"
+    }
+  },
+  "open_issues": [],
+  "versions": {
+    "current": "v1.0.0",
+    "candidate": null,
+    "registry": [
+      {
+        "version": "v1.0.0",
+        "commit_evidence": "evidence/critic_round_2.json",
+        "approved_by": "demo-auto-approval",
+        "note": "演示环境自动批准；真实部署必须由人工显式批准"
+      }
+    ]
+  },
+  "completed_stages": [
+    "data",
+    "signal",
+    "backtest",
+    "robustness",
+    "approval",
+    "monitoring"
+  ]
+}

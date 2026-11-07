@@ -1,0 +1,8 @@
+{
+  "no_duplicate_rows": true,
+  "all_prices_positive": true,
+  "no_missing_values": true,
+  "n_stocks_matches": true,
+  "balanced_panel": true,
+  "all_pass": true
+}

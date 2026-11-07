@@ -1,0 +1,14 @@
+{
+  "rebalance_date": "2023-09-30",
+  "base_picks": [
+    "SYN09",
+    "SYN01",
+    "SYN10"
+  ],
+  "disturbed_picks": [
+    "SYN09",
+    "SYN01",
+    "SYN10"
+  ],
+  "signal_unchanged_after_future_shock": true
+}

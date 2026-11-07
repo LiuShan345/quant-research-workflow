@@ -1,0 +1,28 @@
+{
+  "max_rounds": 6,
+  "max_retries_per_step": 3,
+  "retry_backoff_seconds": [2, 4, 8],
+  "max_tool_calls": 60,
+  "max_wallclock_seconds": 1800,
+  "max_cost_usd": 1.0,
+  "consecutive_invalid_to_block": 2,
+  "required_consecutive_critic_passes": 2,
+  "allowed_dirs": [
+    "data/",
+    "output/",
+    "temp/",
+    ".state/",
+    "evidence/"
+  ],
+  "network_whitelist": [
+    "local-fixture"
+  ],
+  "payment_allowed": false,
+  "broker_access": false,
+  "human_approval_required": [
+    "overwrite_or_delete",
+    "external_network",
+    "version_adopt",
+    "capital_authorization"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "project": "a-share-monthly-cross-sectional-momentum",
+  "data_source": {
+    "mode": "synthetic_fixture",
+    "fixture_path": "tests/fixtures/synthetic_prices.csv",
+    "future_real_source": "akshare_or_csmar",
+    "switch_requires_approval": true
+  },
+  "universe": {
+    "n_stocks": 10,
+    "ticker_prefix": "SYN"
+  },
+  "date_range": {
+    "start": "2023-01-31",
+    "end": "2025-12-31",
+    "frequency": "month_end"
+  },
+  "strategy": {
+    "lookback_months": 6,
+    "top_k": 3,
+    "weighting": "equal",
+    "rebalance": "monthly"
+  },
+  "execution": {
+    "t_plus": 1,
+    "one_way_cost_bps": 10,
+    "trade_after_signal": true
+  },
+  "paths": {
+    "raw": "data/raw",
+    "processed": "data/processed",
+    "output_figures": "output/figures",
+    "output_tables": "output/tables",
+    "state": ".state",
+    "evidence": "evidence"
+  },
+  "metrics": [
+    "annualized_return",
+    "sharpe_ratio",
+    "max_drawdown",
+    "turnover"
+  ]
+}

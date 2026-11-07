@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WorkflowState",
+  "type": "object",
+  "required": [
+    "case_id",
+    "request_id",
+    "state",
+    "role",
+    "round",
+    "retries",
+    "as_of",
+    "artifacts",
+    "open_issues",
+    "versions"
+  ],
+  "properties": {
+    "case_id": { "type": "string", "description": "案例ID，每次新运行/新数据版本唯一" },
+    "request_id": { "type": "string", "description": "当前请求ID，过期或缺失则提交被拒" },
+    "state": {
+      "type": "string",
+      "enum": [
+        "INIT",
+        "DATA_READY",
+        "SIGNAL_READY",
+        "BACKTEST_DONE",
+        "ROBUST_DONE",
+        "AWAITING_APPROVAL",
+        "ACCEPTED",
+        "REVISION",
+        "BLOCKED",
+        "STOPPED",
+        "MONITORING"
+      ]
+    },
+    "role": { "type": "string", "enum": ["orchestrator", "generator", "critic"] },
+    "round": { "type": "integer", "minimum": 1 },
+    "retries": { "type": "integer", "minimum": 0 },
+    "as_of": { "type": "string", "format": "date", "description": "本案例信息截止时点" },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "as_of": { "type": "string" }
+        }
+      }
+    },
+    "open_issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["issue_id", "status", "owner"],
+        "properties": {
+          "issue_id": { "type": "string" },
+          "status": { "type": "string", "enum": ["open", "resolved"] },
+          "owner": { "type": "string" },
+          "evidence": { "type": "string" }
+        }
+      }
+    },
+    "versions": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "string" },
+        "candidate": { "type": "string" },
+        "registry": { "type": "array" }
+      }
+    }
+  }
+}
